@@ -6,51 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- bootstrap link -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-   <style>
-    
-   </style> 
+<style>
+    body {
+       background-image: url(images/bg-4.jpg);
+        background-size: cover; 
+    }
+</style>
 <title>Book Archive</title>
 </head>
 <body>
 <header>
+    <!-- heading -->
    <div class="d-flex justify-content-center align-items-center g-0">
-       <div>
-        <img src="images/logo.png"  class="img-fluid w-50 mx-auto "  alt="">
+       <div >
+        <img src="images/logo.png"  class="img-fluid w-50 p-4 mx-auto "  alt="">
        </div>
-   <div>
-    <h2 class="text-center text-info"><i>Welcome to Open Library</i></h2>
+   <div >
+    <h2 class="text-center text-white"><i>Welcome to Open Library</i></h2>
    </div>
    </div>
 </header>
 <section>
-    <!-- The only thing that you absolutely have to know, is the location of the library
-   
-   -->
+    <h3 class="text-center text-info "> Nothing is pleasanter than exploring a library </h3>
 
-    <h3 class="text-center text-success "> Nothing is pleasanter than exploring a library </h3>
-    <h5 class="text-center  "> Libraries store the energy that fuels the imagination  </h5>
     <!-- search button -->
     <div class="input-group mb-3 w-50 mx-auto">
         <input id="search-field"  type="text" class="form-control" 
         placeholder="Search your favourite book (e.g.javascript) " aria-label="Recipient's username" aria-describedby="button-addon2">
         <button onclick="searchBook()"
-         class="btn btn-outline-dark" type="button" id="button-search">Search</button>
+         class="btn btn-outline-info" type="button" id="button-search">Search</button>
       </div>
       <!-- search result -->
-     
-        <div id="search-result" class="row row-cols-1 row-cols-md-4 g-4 p-3">
-          
-            <div class="col">
-              <div class="card h-100">
-                <!-- <img src="..." class="card-img-top" alt="..."> -->
-                <div class="card-body">
-                  <h5 class="card-title">book</h5>
-                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-              </div>
-            </div> 
+        <div id="search-result" class="row row-cols-1 row-cols-md-4 g-4 p-3 ">
           </div>
-     
+       <!-- error message -->
+  <div id="error-message"  class="text-center m-2 text-white"></div>
+  <!-- book number found -->
+  <div id="book-numbers">
+
+  </div>
+  
 </section>
 
 
