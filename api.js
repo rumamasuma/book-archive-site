@@ -1,11 +1,13 @@
+
 const searchBook = () => {
     const searchField = document.getElementById('search-field');
     const searchText = searchField.value;
     // console.log(searchText);
+
     //  clear data
     searchField.value= '';
     // error handle
-    if(searchText === ''){
+    if(searchText == ''){
         document.getElementById('error-message').style.display = 'block';
         document.getElementById('error-message').innerHTML =`<h3 >Please give a book name !!!</h3>`
     }
@@ -17,15 +19,10 @@ const searchBook = () => {
         .then(res => res.json())
         .then(data =>displaySearchResult(data.docs));
     }
-//     const bookResult = books=> {
-//         console.log(books.numFound)
-//     const totalResult  =  document.getElementById('book-numbers')
-//     totalResult.innerText = `books Found ${books.numFound}`;
-//     }
-//     bookResult();
+
 }
 
-
+// display result in cards
 const displaySearchResult = books => {
 // console.log(books);
 
@@ -52,8 +49,8 @@ else{
           <div class="card-body">
             <h5 class="card-title">${book.title}</h5>
             <h6 class="card-title">Author : ${book.author_name}</h6>
-            <p class="card-title"> Published : ${book.publish_date[0]}</p>
-            <p class="card-text">Publisher-<i><b>${book.publisher}</b></i></p>
+            <p class="card-title"><b> Published : </b>${book.publish_date[0]}</p>
+            <p class="card-text"><b>Publisher-</b><i>${book.publisher}</i></p>
         </div>
       </div>
         `;
